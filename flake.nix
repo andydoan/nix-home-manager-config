@@ -19,10 +19,6 @@
         inherit pkgs;
         modules = [
           ./home.nix
-          {
-            # This makes the modules directory available to import from
-            imports = [ ./bash ./starship ];
-          }
         ];
       };
     };
