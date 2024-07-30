@@ -22,7 +22,7 @@
     fzf
     git
     keepass
-    tailscale
+    #tailscale
     vscode
     neofetch
     starship
