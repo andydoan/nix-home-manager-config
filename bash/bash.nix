@@ -3,7 +3,7 @@
 {
   programs.bash = {
     enable = true;
-    historyControl = ["ignoreboth"];
+    historyControl = ["ignoredups" "ignorespace"];
     historyFileSize = 100000;
     historySize = 1000;
     shellOptions = [
@@ -30,29 +30,6 @@
     };
     initExtra = ''
       # Existing initExtra content...
-
-      # OS-specific ignored files for ls
-      if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-          ignored_files=''
-      elif [[ "$OSTYPE" == "darwin"* ]]; then
-          # Mac OSX
-          true
-      elif [[ "$OSTYPE" == "cygwin" ]]; then
-          # POSIX compatibility layer and Linux environment emulation for Windows
-          true
-      elif [[ "$OSTYPE" == "msys" ]]; then
-          # Lightweight shell and GNU utilities compiled for Windows (part of MinGW)
-          ignored_files='-I "NTUSER*" -I "ntuser*" -I "\$*"'
-      elif [[ "$OSTYPE" == "win32" ]]; then
-          # I'm not sure this can happen.
-          true
-      elif [[ "$OSTYPE" == "freebsd"* ]]; then
-          # ...
-          true
-      else
-          # Unknown.
-          true
-      fi
 
       # ls aliases with ignored files
       alias la="ls -al $ignored_files"
@@ -109,11 +86,6 @@
   };
 
   programs.fzf = {
-    enable = true;
-    enableBashIntegration = true;
-  };
-
-  programs.starship = {
     enable = true;
     enableBashIntegration = true;
   };

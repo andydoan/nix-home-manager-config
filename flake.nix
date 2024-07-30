@@ -17,8 +17,12 @@
     in {
       homeConfigurations.andy = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        modules = [ 
+        modules = [
           ./home.nix
+          {
+            # This makes the modules directory available to import from
+            imports = [ ./bash ./starship ];
+          }
         ];
       };
     };

@@ -2,7 +2,8 @@
 
 {
   imports = [
-    ./modules/bash.nix
+    ./bash/bash.nix
+    ./starship/starship.nix
   ];
 
   # Let Home Manager install and manage itself.
@@ -60,12 +61,6 @@
       br = "branch";
       # Add any other aliases you use
     };
-  };
-
-  # Starship prompt
-  programs.starship = {
-    enable = true;
-    # Add any specific starship configurations here
   };
 
   # Environment variables
