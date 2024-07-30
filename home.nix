@@ -4,6 +4,7 @@
   imports = [
     ./bash/bash.nix
     ./starship/starship.nix
+    ./tmux/tmux.nix
   ];
 
   # Let Home Manager install and manage itself.
