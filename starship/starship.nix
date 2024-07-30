@@ -7,7 +7,7 @@
     settings = {
       format = ''
         [╭─](white)$time $username$hostname $directory$git_branch$python$nix_shell$env_var$cmd_duration
-        [╰─](white)$character'';
+        [╰─](white)$character '';
 
       time = {
         format = "[[\\[$time\\]]($style)]($style)";
