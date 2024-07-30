@@ -36,9 +36,6 @@
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
   ];
 
-  # Font configuration
-  fonts.fontconfig.enable = true;
-
   # Firefox configuration
   programs.firefox = {
     enable = true;
