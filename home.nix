@@ -33,14 +33,11 @@
     maestral
     maestral-gui
     xclip
+    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
   ];
 
   # Font configuration
   fonts.fontconfig.enable = true;
-
-  home.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
-  ];
 
   # Firefox configuration
   programs.firefox = {
