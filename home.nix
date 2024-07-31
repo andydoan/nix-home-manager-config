@@ -22,9 +22,9 @@
     ripgrep
     fzf
     git
-    keepass
+    #keepass
     #tailscale
-    vscode
+    #vscode
     neofetch
     starship
     libreoffice
