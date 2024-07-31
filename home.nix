@@ -17,7 +17,7 @@
   # Packages to install
   home.packages = with pkgs; [
     #google-chrome
-    docker
+    #docker
     python310
     ripgrep
     fzf
