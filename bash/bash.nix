@@ -9,6 +9,9 @@
     shellOptions = [
       "histappend"
       "checkwinsize"
+      "extglob"
+      "globstar"
+      "checkjobs"
     ];
     shellAliases = {
       # Navigation
@@ -29,7 +32,9 @@
       copy = "xclip -sel clip";
     };
     initExtra = ''
-      # Existing initExtra content...
+      # Case-insensitive autocomplete
+      bind "set completion-ignore-case on"
+      bind "set show-all-if-ambiguous on"
 
       # ls aliases with ignored files
       alias la="ls -al $ignored_files"
