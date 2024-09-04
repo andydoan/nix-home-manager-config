@@ -11,10 +11,15 @@
     userSettings = {
       "diffEditor.renderSideBySide" = false;
       "explorer.confirmDelete" = false;
-      "editor.fontFamily" = "JetBrainsMono Nerd Font";
       "workbench.colorTheme" = "Material Theme Darker";
       "terminal.integrated.fontFamily" = "'JetBrainsMono Nerd Font'";
       "terminal.integrated.fontSize" = 14;
+
+      "editor.fontFamily" = "JetBrainsMono Nerd Font";
+      "editor.rulers" = [ 80 ];          # Show a ruler at 80 characters
+      "editor.wordWrap" = "on";          # Enable word wrapping
+      "editor.wordWrapColumn" = 80;      # Set word wrap column to 80
+      "editor.wrappingIndent" = "indent";  # Indent wrapped lines
     };
 
     keybindings = [
