@@ -34,6 +34,8 @@
       unbind r
       bind r source-file ~/.tmux.conf
       
+      bind s list-sessions
+
       # split panes using | and -
       bind | split-window -h
       bind - split-window -v
