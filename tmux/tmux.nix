@@ -31,9 +31,6 @@
       }
     ];
     extraConfig = ''
-      unbind r
-      bind r source-file ~/.tmux.conf
-      
       bind s list-sessions
 
       # split panes using | and -
