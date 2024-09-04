@@ -5,6 +5,7 @@
     ./bash/bash.nix
     ./starship/starship.nix
     ./tmux/tmux.nix
+    ./vscode/vscode.nix
   ];
 
   # Let Home Manager install and manage itself.
