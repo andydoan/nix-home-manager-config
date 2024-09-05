@@ -5,7 +5,6 @@
     enable = true;
     shortcut = "s";
     escapeTime = 0;
-    keyMode = "vi";
     customPaneNavigationAndResize = true;
     plugins = with pkgs.tmuxPlugins; [
       sensible
@@ -31,7 +30,7 @@
       }
     ];
     extraConfig = ''
-      bind s list-sessions
+      bind s choose-session
 
       # split panes using | and -
       bind | split-window -h
