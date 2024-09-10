@@ -6,7 +6,7 @@
     enableUpdateCheck = true;
     enableExtensionUpdateCheck = true;
     package = pkgs.vscode;
-    mutableExtensionsDir = true;
+    mutableExtensionsDir = false;
 
     userSettings = {
       "diffEditor.renderSideBySide" = false;
