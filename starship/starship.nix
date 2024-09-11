@@ -10,7 +10,7 @@
         [╰─](white)$character '';
 
       time = {
-        format = "[[\\[$time\\]]($style)]($style)";
+        format = " [$time]($style)";
         style = "dimmed #FFFFFF";
         time_format = "%T";
         disabled = false;
