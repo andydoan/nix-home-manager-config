@@ -30,15 +30,20 @@
       did = "echo '' >> ~/did.txt && date >> ~/did.txt && hx ~/did.txt";
       vac = ". venv/bin/activate";
       copy = "xclip -sel clip";
+
+      # Aliases for `ls` with color output
+      ls = "ls --color=auto";
+      ll = "ls -lh --color=auto";  # Long listing with human-readable sizes
+      la = "ls -alh --color=auto"; # Include hidden files with long listing
     };
+
     initExtra = ''
       # Case-insensitive autocomplete
       bind "set completion-ignore-case on"
       bind "set show-all-if-ambiguous on"
 
-      # ls aliases with ignored files
-      alias la="ls -al $ignored_files"
-      alias ll="ls -l $ignored_files"
+      # Customize `ls` colors using `LS_COLORS`
+      eval "$(dircolors -b)"
 
       # Make grep more user friendly by highlighting matches and exclude grepping through .svn folders.
       alias grep='grep --color=auto --exclude-dir=\.svn'
