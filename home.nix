@@ -49,7 +49,7 @@
   programs.git = {
     enable = true;
     userName = "Andy Doan";
-    userEmail = "adoan@nstrading.com";
+    userEmail = "github@andydoan.com";
     
     # Optional: Add extra configurations
     extraConfig = {
