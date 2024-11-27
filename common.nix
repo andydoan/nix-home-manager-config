@@ -18,32 +18,24 @@
 
   # Packages to install
   home.packages = with pkgs; [
-    #google-chrome
-    #docker
-    python310
     ripgrep
     fzf
     git
-    #keepass
-    #tailscale
-    #vscode
+    tailscale
     neofetch
-    starship
-    libreoffice
+    tmux
     vim
     helix
-    tmux
-    maestral
-    maestral-gui
+    starship
     xclip
+    autossh
+    wget
+    yt-dlp
+
+    python312
+    terraform
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
   ];
-
-  # Firefox configuration
-  programs.firefox = {
-    enable = true;
-    # Add any specific Firefox configurations here
-  };
 
   # Git configuration
   programs.git = {

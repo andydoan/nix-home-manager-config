@@ -12,14 +12,32 @@
 
   outputs = { nixpkgs, home-manager, ... }:
     let
-      system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
+      username = "andy";
     in {
-      homeConfigurations.andy = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        modules = [
-          ./home.nix
-        ];
+      homeConfigurations = {
+        "${username}@wsl" = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          modules = [ 
+            ./common.nix
+            ./hosts/home-wsl.nix
+          ];
+        };
+
+        "${username}@ubuntu" = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          modules = [ 
+            ./common.nix
+            ./hosts/home-ubuntu.nix
+          ];
+        };
+
+        "${username}@mac" = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.aarch64-darwin;
+          modules = [ 
+            ./common.nix
+            ./hosts/home-darwin.nix
+          ];
+        };
       };
     };
 }
