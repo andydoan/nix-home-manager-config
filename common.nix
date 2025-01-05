@@ -34,6 +34,7 @@
 
     python312
     terraform
+    google-cloud-sdk
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
   ];
 

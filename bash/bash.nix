@@ -38,6 +38,11 @@
     };
 
     initExtra = ''
+      # Source a custom bash file
+      if [ -f ~/.bash_extra ]; then
+        . ~/.bash_extra
+      fi
+
       # Case-insensitive autocomplete
       bind "set completion-ignore-case on"
       bind "set show-all-if-ambiguous on"
