@@ -47,9 +47,6 @@
       bind "set completion-ignore-case on"
       bind "set show-all-if-ambiguous on"
 
-      # Customize `ls` colors using `LS_COLORS`
-      eval "$(dircolors -b)"
-
       # Make grep more user friendly by highlighting matches and exclude grepping through .svn folders.
       alias grep='grep --color=auto --exclude-dir=\.svn'
 
