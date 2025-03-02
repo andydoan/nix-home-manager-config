@@ -17,26 +17,32 @@
       homeConfigurations = {
         "${username}@wsl" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          modules = [ 
+          modules = [
             ./common.nix
             ./hosts/home-wsl.nix
+            { home.username = username; }
           ];
+          extraSpecialArgs = { inherit username; };
         };
 
         "${username}@ubuntu" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          modules = [ 
+          modules = [
             ./common.nix
             ./hosts/home-ubuntu.nix
+            { home.username = username; }
           ];
+          extraSpecialArgs = { inherit username; };
         };
 
         "${username}@mac" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.aarch64-darwin;
-          modules = [ 
+          modules = [
             ./common.nix
             ./hosts/home-darwin.nix
+            { home.username = username; }
           ];
+          extraSpecialArgs = { inherit username; };
         };
       };
     };
