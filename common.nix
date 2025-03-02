@@ -5,7 +5,6 @@
     ./bash/bash.nix
     ./starship/starship.nix
     ./tmux/tmux.nix
-    ./vscode/vscode.nix
   ];
 
   # Let Home Manager install and manage itself.
@@ -32,7 +31,6 @@
     wget
     yt-dlp
 
-    python312
     terraform
     google-cloud-sdk
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
@@ -43,7 +41,7 @@
     enable = true;
     userName = "Andy Doan";
     userEmail = "github@andydoan.com";
-    
+
     # Optional: Add extra configurations
     extraConfig = {
       init.defaultBranch = "master";
